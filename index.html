@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Focus Timer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="timer-card">
+    <div class="mode-switch">
+      <button class="mode-btn active" data-mode="work" id="workModeBtn">Work (25m)</button>
+      <button class="mode-btn" data-mode="break" id="breakModeBtn">Break (5m)</button>
+    </div>
+
+    <div class="ring-container">
+      <svg class="ring-svg" width="280" height="280" viewBox="0 0 280 280">
+        <circle class="ring-track" cx="140" cy="140" r="120" />
+        <circle class="ring-progress" id="ringProgress" cx="140" cy="140" r="120" />
+      </svg>
+      <div class="timer-display">
+        <span class="time-text" id="timeDisplay">25:00</span>
+        <span class="session-label" id="sessionLabel">Focus Session</span>
+      </div>
+    </div>
+
+    <!-- controls -->
+    <div class="actions">
+      <button class="btn btn-primary" id="startBtn">Start</button>
+      <button class="btn btn-secondary" id="resetBtn">Reset</button>
+    </div>
+
+    <div class="stats">
+      <span>Completed rounds: <strong id="roundsCount">0</strong></span>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
